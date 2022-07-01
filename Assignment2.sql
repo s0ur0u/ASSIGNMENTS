@@ -179,3 +179,40 @@ FROM Suppliers s INNER JOIN(Products p INNER JOIN( [Order Details]d INNER JOIN (
 	ON p.SupplierID = s.SupplierID
 ORDER BY [Supplier Company Name]
 
+/*24-Display the products order each day. Show Order date and Product Name.*/
+Select o.OrderDate, p.ProductName, d.OrderID, d.ProductID
+FROM Orders o  INNER JOIN( [Order Details] d INNER JOIN Products p
+	ON d.ProductID = p.ProductID)
+	ON o.OrderID = d.OrderID
+ORDER BY o.OrderDate
+
+/*25-Displays pairs of employees who have the same job title.*/
+Select FirstName+' '+LastName[FullName], Title
+FROM Employees
+WHERE Title IN (
+	Select Title
+	FROM Employees
+	GROUP BY Title
+	HAVING COUNT(Title)>2
+)
+ORDER BY FullName
+
+/*26-Display all the Managers who have more than 2 employees reporting to them.*/
+With Bosses
+AS(
+	Select FirstName, ReportsTo, EmployeeID
+	FROM Employees
+	WHERE ReportsTo IS NULL
+	UNION ALL
+	Select  e.FirstName, e.ReportsTo, e.EmployeeID
+	FROM Employees e INNER JOIN Bosses cte ON e.ReportsTo = cte.EmployeeID
+	)
+Select FirstName, ReportsTo
+FROM Bosses
+GROUP BY FirstName, ReportsTo
+HAVING COUNT(ReportsTo)>0
+
+/*27-Display the customers and suppliers by city. The results should have the
+following columns*/
+Select City, CompanyName[Name], ContactName,Relationship[Type(Customer or Supplier)]
+FROM [Customer and Suppliers by City]
