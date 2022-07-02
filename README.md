@@ -1,1 +1,1 @@
-# SEP Full Stack June IL
+# SEP Full Stack June IL Assignments
