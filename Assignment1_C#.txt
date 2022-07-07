@@ -1,0 +1,85 @@
+01-Introduction to C# and Data Types
+    A-Understanding Data Types
+
+	I-Test your Knowledge
+
+1-What type would you choose for the following "numbers"?
+	A person’s telephone number: type(String)
+	A person’s height: type(String)
+	A person’s age: type(Int)
+	A person’s gender (Male, Female, Prefer Not To Answer): type(String)
+	A person’s salary: type(Float/Decimal/Double)
+	A book’s ISBN: type(String)
+	A book’s price: type(Decimal)
+	A book’s shipping weight: type(Double/Decimal)
+	A country’s population: type(Float/Int)
+	The number of stars in the universe: type(Float)
+	The number of employees in each of the small or medium businesses in the
+	United Kingdom (up to about 50,000 employees per business: type(Int/Float)
+
+
+2-What are the difference between value type and reference type variables? What is boxing and unboxing?
+	a-Value Types directly contain  their data while Reference Types store references to their data.
+	 -Value types each has its own copy of data while with reference types, 2 reference variable can refer the same object.
+	 -In value types operation on one can not effect another but operation on one can effect another with reference types
+
+	b-Boxing, which is more or less implicit, is the process of converting a value type to the type object or to any interface type implemented by this value type.
+	 Unboxing, which is explicit, extracts the value type from the object
+
+
+3-What is meant by the terms managed resource and unmanaged resource in .NET?
+	Managed ressource is the ressource which is managed by the CLR(Common Language Runtime) in .NET Framework. Whereas the Unmanaged ressource is the ressource which is directly executed by the operating system.
+
+
+4-Whats the purpose of Garbage Collector in .NET?
+	The Garbage collector manages the allocation and release of memory for an application
+
+	B-Controlling Flow and Converting Types
+
+		I-Test your Knowledge
+1-What happens when you divide an int variable by 0?
+	There will be an error because an integer cannot be divided by 0.
+
+
+2-What happens when you divide a double variable by 0?
+	The result will be infinity.
+
+
+3-What happens when you overflow an int variable, that is, set it to a value beyond its range?
+	You will receive an error explaining that the result is out of bounds.
+
+
+4-What is the difference between x = y++; and x = ++y?
+	When excuting y++ it reads the operation and do the x = y+1 after it has been read.
+	On the other hand, when executing ++y, it will first do the x = y+1 and then read the operation.
+
+
+5-What is the difference between break, continue, and return when used inside a loop statement?
+	The break statement terminates the closest enclosing iteration  statement or switch statement.
+	The continue statement starts a new iteration of the closest enclosing iteration statement.
+	The return statement terminates execution of the function in which it appears and returns control to the caller.
+
+
+6-What are the three parts of a for statement and which of them are required?
+	The three parts are:
+	-The initializer section that is executed only once, before entering the loop.
+	-The condition section that determines if the next iteration in the loop should be executed.
+	-The iterator section that defines what happens after each execution of the body of the loop.
+	All the sections of the for statement are optional.
+
+
+7-What is the difference between the = and == operators?
+	The equality operator (==) returns true if its operands are equal, false otherwise.
+	As part of the operands types (=), it returns or initializes the value of variables.
+
+
+8-Does the following statement compile? for ( ; true; ) ;
+	No it does not compile because it will overflow. The time of execution time will exceed.
+
+
+9-What does the underscore _ represent in a switch expression?
+	The default case is replaced by the discard key(Underscore_)
+
+
+10-What interface must an object implement to be enumerated over by using the foreach statement?
+	The IEnumerable interface provides support for the foreach iteration.

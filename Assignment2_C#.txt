@@ -1,0 +1,27 @@
+		B-Arrays and Strings
+
+	I-Test your Knowledge
+
+1-When to use String vs. StringBuilder in C# ?
+	If a string is going to remain constant throughout the program, then we use String Class object because a String object is immutable.
+	If a string can change (e.i lots of logic and operations in the construction of the string) then using a StringBuilder is the best option.
+
+
+2-What is the base class for all arrays in C# ?
+	The Array Class is the base class for all the arrays in C#.
+
+
+3-How do you sort an array in C# ?
+	To sort an array we use the Array.Sort() Method, that sorts the elements in a one-dimensional array.
+
+
+4-What property of an array object can be used to get the total number of elements in an array?
+	By using the Array.Length Property, we can get the total number of elements in all the dimensions of the Array.
+
+
+5-Can you store multiple data types in System.Array?
+	No we cannot store multiple datatype in an Array, but we can store multiplle variables of the same datatype in an Array.
+
+
+6-What’s the difference between the System.Array.CopyTo() and System.Array.Clone()?
+	The Clone() method makes a clone of the original array. It returns an exact length array. On the other hand, CopyTo() copies the elements from the original array to the destination array starting at the specified destination array index.
